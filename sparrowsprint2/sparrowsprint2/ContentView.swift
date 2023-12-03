@@ -12,36 +12,34 @@ struct ContentView: View {
     @State private var minWidth = 100.0
     @State private var maxWidth = 300.0
     @State private var width = 300.0
-    @State private var isEditing = false
     
     
     var body: some View {
         VStack {
-            VStack {
+            VStack (alignment: .leading, spacing: 0) {
                 
                 
                 Text("Марафон ")
                     .font(.system(size: 18, weight: .regular))
                     .foregroundStyle(.gray)
-                + Text("по SwiftUI")
+                +
+                Text("по SwiftUI ")
                     .font(.system(size: 18, weight: .regular))
-                
-                
+                +
                 Text("«Отцовский пинок»")
                     .font(.system(size: 30, weight: .semibold))
                     .foregroundStyle(.blue)
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 
             }
+            
+            .frame(width: CGFloat(width))
+            .frame(minHeight: 200)
             .border(Color.red, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-            .frame(maxWidth: CGFloat(width), alignment: .leading)
+            .padding(.bottom)
             
             Slider(
                 value: $width,
-                in: minWidth...maxWidth,
-                onEditingChanged: { editing in
-                    isEditing = editing
-                }
+                in: minWidth...maxWidth
             )
             .padding(.horizontal, 20)
         }
