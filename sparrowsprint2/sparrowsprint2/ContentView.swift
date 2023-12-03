@@ -13,16 +13,29 @@ struct ContentView: View {
     @State private var maxWidth = 300.0
     @State private var width = 300.0
     @State private var isEditing = false
-
+    
     
     var body: some View {
         VStack {
             VStack {
-                Text("Марафон по SwiftUI")
-                    .font(.subheadline)
-                Text("Отцовский пинок")
-                    .font(.largeTitle)
+                
+                HStack {
+                    Text("Марафон")
+                        .font(.system(size: 18, weight: .regular))
+                        .foregroundStyle(.gray)
+  
+                    
+                    Text("по SwiftUI")
+                        .font(.system(size: 18, weight: .regular))
+                    
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text("«Отцовский пинок»")
+                    .font(.system(size: 30, weight: .semibold))
                     .foregroundStyle(.blue)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
             }
             .border(Color.red, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
             .frame(maxWidth: CGFloat(width) )
@@ -36,8 +49,9 @@ struct ContentView: View {
             )
         }
         Text("\(width)")
-                    .foregroundColor(isEditing ? .red : .blue)
-        .padding()
+            .foregroundColor(isEditing ? .red : .blue)
+            .padding()
+        
     }
 }
 
