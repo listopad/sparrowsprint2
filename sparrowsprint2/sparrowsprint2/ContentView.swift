@@ -19,17 +19,13 @@ struct ContentView: View {
         VStack {
             VStack {
                 
-                HStack {
-                    Text("Марафон")
-                        .font(.system(size: 18, weight: .regular))
-                        .foregroundStyle(.gray)
-  
-                    
-                    Text("по SwiftUI")
-                        .font(.system(size: 18, weight: .regular))
-                    
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text("Марафон ")
+                    .font(.system(size: 18, weight: .regular))
+                    .foregroundStyle(.gray)
+                + Text("по SwiftUI")
+                    .font(.system(size: 18, weight: .regular))
+    
                 
                 Text("«Отцовский пинок»")
                     .font(.system(size: 30, weight: .semibold))
@@ -38,7 +34,7 @@ struct ContentView: View {
                 
             }
             .border(Color.red, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-            .frame(maxWidth: CGFloat(width) )
+            .frame(maxWidth: CGFloat(width), alignment: .leading)
             
             Slider(
                 value: $width,
