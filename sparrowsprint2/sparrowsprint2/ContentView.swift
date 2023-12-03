@@ -17,8 +17,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             VStack (alignment: .leading, spacing: 0) {
-                
-                
                 Text("Марафон ")
                     .font(.system(size: 18, weight: .regular))
                     .foregroundStyle(.gray)
@@ -29,7 +27,6 @@ struct ContentView: View {
                 Text("«Отцовский пинок»")
                     .font(.system(size: 30, weight: .semibold))
                     .foregroundStyle(.blue)
-                
             }
             
             .frame(width: CGFloat(width))
@@ -43,7 +40,6 @@ struct ContentView: View {
             )
             .padding(.horizontal, 20)
         }
-        
     }
 }
 
