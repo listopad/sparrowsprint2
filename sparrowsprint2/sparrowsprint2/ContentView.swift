@@ -34,7 +34,7 @@ struct ContentView: View {
             
             .frame(width: CGFloat(width))
             .frame(minHeight: 200)
-            .border(Color.red, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+            .border(Color.red, width: 1)
             .padding(.bottom)
             
             Slider(
