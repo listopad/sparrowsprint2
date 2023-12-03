@@ -25,7 +25,7 @@ struct ContentView: View {
                     .foregroundStyle(.gray)
                 + Text("по SwiftUI")
                     .font(.system(size: 18, weight: .regular))
-    
+                
                 
                 Text("«Отцовский пинок»")
                     .font(.system(size: 30, weight: .semibold))
@@ -43,10 +43,8 @@ struct ContentView: View {
                     isEditing = editing
                 }
             )
+            .padding(.horizontal, 20)
         }
-        Text("\(width)")
-            .foregroundColor(isEditing ? .red : .blue)
-            .padding()
         
     }
 }
